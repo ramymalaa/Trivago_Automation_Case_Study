@@ -1,0 +1,45 @@
+a.	
+•	[info] Playing test case Search_valid 
+•	[info] Executing: |open | / | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |click | css=span.room5-icons-search | | 
+•	[info] Executing: |type | id=ajax-search-input | berlin | 
+•	[info] Executing: |sendKeys | id=ajax-search-input | | 
+•	[info] Executing: |waitForVisible | //h1[contains(text(),"Search Results")] | | 
+•	[info] Test case passed 
+•	[info] Playing test case Search_Invalid 
+•	[info] Executing: |open | / | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |click | css=span.room5-icons-search | | 
+•	[info] Executing: |type | id=ajax-search-input | bbbbb | 
+•	[info] Executing: |sendKeys | id=ajax-search-input | | 
+•	[info] Test case passed 
+•	[info] Playing test case Contact_invalid 
+•	[info] Executing: |open | / | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |clickAndWait | link=Contact | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |clickAndWait | id=contactform-submit | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |verifyElementPresent | css=div.error-msg.mb-16 | | 
+•	[info] Test case passed 
+•	[info] Playing test case Contact_valid 
+•	[info] Executing: |open | / | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |clickAndWait | link=Contact | | 
+•	[info] Executing: |assertTitle | exact:Room5: hotel inspiration from trivago.com | | 
+•	[info] Executing: |type | id=message | Message 1 | 
+•	[info] Executing: |type | id=full_name | My Name | 
+•	[info] Executing: |type | id=email | User00@mail.com | 
+•	[info] Executing: |click | id=contactform-submit | | 
+•	[info] Executing: |waitForText | css=h2 | Please give us feedback on what you want to read about! | 
+•	[info] Test case passed 
+•	[info] Playing test case Verify_sections 
+•	[info] Executing: |open | / | | 
+•	[info] Executing: |verifyText | css=h1.mt-0 | Editor's Pick | 
+•	[info] Executing: |verifyText | css=h1.mt-8.mb-8 | Most Popular | 
+•	[info] Executing: |verifyText | //section[@id='content']/div/div[7]/div/h1 | Recent Articles | 
+•	[info] Executing: |verifyText | //section[@id='content']/div/div[13]/div[2]/h1 | Inspiration | 
+•	[info] Executing: |verifyText | //section[@id='content']/div/div[16]/div[2]/h1 | Destinations | 
+•	[info] Test case passed 
+[info] Test suite completed: 5 played, all passed! 
